@@ -33,7 +33,7 @@ const ProductsContext = createContext<useProductsContextType>(initContextState);
 type childrenType = {children?:ReactElement | ReactElement[]}
 
 export const ProductsProvider= ({children} : childrenType)=>{
-    const [products,setProducts] = useState<ProductType[]>(initstate);
+    const [products] = useState<ProductType[]>(initstate);
 
     return <ProductsContext.Provider value={{products}}>
         {children}
